@@ -1,0 +1,126 @@
+.ProjectSection {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh; 
+    width: 100vw;
+    gap: 25%;
+    border: 10px solid #765D43;
+    overflow: hidden;
+}
+
+.BoxGroup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+    gap: 12%;
+    margin-top: 5%;
+}
+
+.ProjectBox {
+    width: 120%;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.PJImg {
+    height: 60%;
+    width: 70%;
+    border: 3px solid #828282;
+    border-radius: 10px;
+    object-fit: cover; 
+
+}
+
+.TextBox {
+    font-size: 20px;
+    font-weight: 700;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    align-self: flex-start;
+    margin-top: 10px;
+    margin-left: 10%;
+}
+
+.TextBox_tech {
+    font-size: 20px;
+    font-weight: 700;
+    
+    background-color: #a5815b;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.TextBox strong {
+    color: #828282;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+/* 모달 배경 */
+.Modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* 모달 내용 */
+.ModalContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.ModalContent h2 {
+    margin-bottom: 15px;
+}
+
+.ModalContent a {
+    color: black;
+    text-decoration: none;
+}
+
+.ModalContent p {
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #828282;
+}
+
+.ModalContent button {
+    padding: 10px;
+    background-color: #765D43;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ModalContent button:hover {
+    background-color: #a59788;
+}

@@ -1,0 +1,21 @@
+.TopButton {
+    position: fixed; /* 화면에 고정 */
+    bottom: 30px; /* 아래 여백 */
+    right: 30px; /* 오른쪽 여백 */
+    width: 50px;
+    height: 50px;
+    background-color: #765D43; /* 버튼 색상 */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.TopButton:hover {
+    background-color: #5a4432; /* 호버 시 색상 변경 */
+}

@@ -1,0 +1,40 @@
+.Section {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #D9CCBD;
+}
+
+.Section > * {
+  width: 100%;
+  max-width: 1920px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* 반응형 설정 */
+@media (max-width: 1280px) {
+  .Section > * {
+      min-width: 100%; /* 화면 크기에 맞게 너비 설정 */
+      height: auto; /* 화면 크기에 맞춰 유동적으로 높이 조정 */
+  }
+}
+
+/* 모바일 및 작은 화면 */
+@media (max-width: 768px) {
+  .Section {
+      padding: 0 5vw; /* 모바일에서는 더 큰 여백을 추가 */
+  }
+
+  .Section > * {
+      min-height: auto; /* 높이 고정 없이 유동적으로 설정 */
+  }
+}

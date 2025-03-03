@@ -1,0 +1,77 @@
+.PageContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* 🔥 TitleSection을 가운데 배치 */
+.TitleSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    width: 40%;
+    text-align: center;
+    background-color: #765D43;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+/* 🔥 매달린 원을 섹션 바깥에 배치 */
+.HangingCircleContainer {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* 줄 스타일 */
+.HangingLine_1, .HangingLine_2, .HangingLine_3, .HangingLine_4{
+    width: 3px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+/* 선 길이 설정 */
+.HangingLine_1 { height: 30vh; right: 40%;}
+.HangingLine_2 { height: 50vh; right: 10%;}
+.HangingLine_3 { height: 20vh; right: 20%;}
+.HangingLine_4 { height: 60vh; right: 50%;}
+
+
+/* 원 스타일 */
+.HangingCircle {
+    width: 200px;
+    height: 200px;
+    background-color: #a59788;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10px;
+    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.Scroll {
+    font-size: 1.2rem;
+    font-weight: 1000;
+    color: #949494;
+    position: absolute; /* 부모 기준 절대 위치 지정 */
+    right: 78%;
+    top: 150%;
+    z-index: 1;
+}

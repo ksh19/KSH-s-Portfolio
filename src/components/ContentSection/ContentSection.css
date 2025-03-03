@@ -1,0 +1,95 @@
+.ContentSection {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh; 
+    width: 100vw;
+    gap: 20%;
+    overflow: hidden;
+    position: relative;
+    border: 10px solid #765D43;
+}
+
+/* 선 스타일 */
+.Line_1, .Line_2, .Line_3, .Line_4 {
+    width: 3px;
+    background-color: white;
+    position: relative;
+}
+/* 선 길이 설정 */
+.Line_1 { height: 20%; }
+.Line_2 { height: 50%; }
+.Line_3 { height: 30%; }
+.Line_4 { height: 40%; }
+
+/* 원 스타일 */
+.Circle_1 {
+    height: 306px;
+    width: 306px;
+    background-color: #6C4019;
+    border-radius: 50%;
+}
+.Circle_2 {
+    height: 199px;
+    width: 199px;
+    background-color: #BC9477;
+    border-radius: 50%;
+}
+.Circle_3 {
+    height: 122px;
+    width: 122px;
+    background-color: #6C543B;
+    border-radius: 50%;
+}
+.Circle_4 {
+    height: 382px;
+    width: 382px;
+    background-color: #C2AE8E;
+    border-radius: 50%;
+}
+/* 원을 위치 설정 */
+.Circle_1, .Circle_2, .Circle_3, .Circle_4 {
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    transition: box-shadow 0.2s ease-in-out; /* 부드러운 애니메이션 */
+    cursor: pointer;
+}
+
+.Circle_1:hover, .Circle_2:hover, .Circle_3:hover, .Circle_4:hover {
+    box-shadow: 0 0 30px rgba(255, 255, 100, 0.9); /* 노란 빛나는 효과 */
+}
+
+.ProjectTitle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%; /* 하단에서 20px 간격 */
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    z-index: 10;
+    text-shadow: 
+        -2px -2px 0 rgba(255, 255, 100, 0.2), 
+         2px -2px 0 rgba(255, 255, 100, 0.2), 
+        -2px  2px 0 rgba(255, 255, 100, 0.2), 
+         2px  2px 0 rgba(255, 255, 100, 0.2);
+}
+
+.CS{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
