@@ -47,7 +47,7 @@ const ProjectSection = () => {
                             <div className="TextBox_tech">CSS3</div>
                         </div>
                     </div>
-                    <div className='ProjectBox' onClick={() => openModal("KSH's Portfolio", "https://github.com/kimchanyoo/24-Capstone")}>
+                    <div className='ProjectBox' onClick={() => openModal("KSH's Portfolio", "https://github.com/ksh19/KSH-s-Portfolio")}>
                         <img src={PofolImg} alt="KSH's Portfolio" className='PJImg'/>
                         <div className="TextBox">
                             <strong>Project Name:</strong> KSH's Portfolio
