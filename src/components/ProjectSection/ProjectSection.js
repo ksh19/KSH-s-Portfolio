@@ -79,6 +79,8 @@ const ProjectSection = () => {
                         </div>
                     </div>
                     <div className='ProjectBox'>
+                        2025.3.10 ~ <br/>
+                        <h1>프로젝트 준비중</h1>
                         {/*
                         <div className="TextBox">
                             <strong>Project Name:</strong> ㅇㅇㅇㅇ
