@@ -8,11 +8,12 @@
     gap: 25%;
     border: 10px solid #765D43;
     overflow: hidden;
+    padding: 0 5vw;
 }
 
 .BoxGroup {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
     width: 50%;
     gap: 12%;
     margin-top: 5%;
@@ -20,7 +21,8 @@
 
 .ProjectBox {
     width: 120%;
-    height: 400px;
+    height: 50vh;
+    max-height: 400px;
     background-color: #ffffff;
     border-radius: 10px;
     display: flex;
@@ -34,8 +36,8 @@
 }
 
 .PJImg {
-    height: 60%;
-    width: 70%;
+    height: 17vh;
+    width: 17vw;
     border: 3px solid #828282;
     border-radius: 10px;
     object-fit: cover; 
@@ -43,7 +45,7 @@
 }
 
 .TextBox {
-    font-size: 20px;
+    font-size: 1vw;
     font-weight: 700;
     
     display: flex;
@@ -51,12 +53,12 @@
     align-items: center;
     text-align: left;
     align-self: flex-start;
-    margin-top: 10px;
+    margin-top: 3%;
     margin-left: 10%;
 }
 
 .TextBox_tech {
-    font-size: 20px;
+    font-size: 0.8vw;
     font-weight: 700;
     
     background-color: #a5815b;
@@ -69,7 +71,7 @@
 .TextBox strong {
     color: #828282;
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 0.8vw;
     margin-right: 5px;
 }
 

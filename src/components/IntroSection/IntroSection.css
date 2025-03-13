@@ -5,68 +5,129 @@
     justify-content: center;
     height: 100vh; /* 화면 전체 높이 */
     width: 100vw;
-    gap: 20%;
+    gap: 20%; /* 가로 간격을 화면 크기에 비례하도록 조정 */
     border: 10px solid #765D43;
     overflow: hidden;
+    padding: 0 5vw; /* 작은 화면에서 여백을 조정 */
 }
 
-.IntroTitle{
+.IntroTitle {
     position: relative;
-    top: 150px;
+    top: 9vh;
     display: flex;
     justify-content: start;
-    font-size: 36px;
+    font-size: 2vw; /* 화면 크기에 비례하여 텍스트 크기 조정 */
     text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 800;
 }
 
 .IntroBox {
-    width: 900px;
-    height: 700px;
+    width: 50vw; /* 화면 크기에 비례하여 박스 크기 조정 */
+    max-width: 900px; /* 최대 크기 제한 */
+    height: 60vh;
+    max-height: 700px;
     background-color: #ffffff;
-    margin-top: 18%;
+    margin-top: 10vh;
     border-radius: 10px;
     box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 1%;
+    padding: 2%;
 }
 
 .ImgBox {
-    height: 200px;
-    width: 200px;
-    margin-top: 5%;
+    margin-top: 2vh;
 }
 
 .TextBox_1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 20px;
+    font-size: 1vw; /* 화면 크기에 따라 글씨 크기 조정 */
     font-weight: 700;
-
-    line-height: 3;
+    line-height: 1.8;
     text-align: left;
-    margin-top: 10%;
+    margin-top: 3vh;
+    width: 80%;
 }
 
 .TextBoxItem_1 {
-    margin-bottom: 10px;
+    margin-bottom: 2vh;
 }
 
 .TextBoxItem_1 strong {
     color: #828282;
     font-weight: bolder;
-
 }
 
 .noWrapText {
-    white-space: nowrap; /* "Introduction:" 부분은 줄 바꿈 없이 한 줄로 처리 */
-    display: inline-block; /* 텍스트가 길어질 경우 한 줄로 표시되도록 */
+    white-space: nowrap; /* "Introduction:" 부분 줄 바꿈 방지 */
+    display: inline-block;
 }
 
 .MyImg {
-    width: 200px;
+    width: 15vh;
     border-radius: 30px;
+}
+
+@media (max-width: 768px) {
+    .IntroSection {
+        gap: 15%;
+    }
+
+    .IntroTitle {
+        font-size: 3vw;
+        top: 9vh;
+    }
+
+    .IntroBox {
+        width: 70vw;
+        height: auto;
+        padding: 3%;
+    }
+
+    .ImgBox {
+        height: 12vh;
+        width: 12vh;
+        margin-bottom: 15%;
+    }
+
+    .TextBox_1 {
+        font-size: 2vw;
+        text-align: left;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .IntroSection {
+        gap: 10%;
+    }
+
+    .IntroTitle {
+        font-size: 4vw;
+        top: 9vh;
+    }
+
+    .IntroBox {
+        width: 70vw;
+        height: auto;
+        padding: 8%;
+    }
+
+    .ImgBox {
+        height: 10vh;
+        width: 10vh;
+    }
+
+    .TextBox_1 {
+        font-size: 2.8vw;
+        text-align: left;
+        width: 95%;
+    }
+    .noWrapText {
+        white-space: normal; /* 자동 줄바꿈 허용 */
+        display: inline-block;
+    }
 }

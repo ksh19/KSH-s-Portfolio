@@ -24,7 +24,6 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-
 /* 🔥 매달린 원을 섹션 바깥에 배치 */
 .HangingCircleContainer {
     position: absolute;
@@ -48,11 +47,10 @@
 .HangingLine_3 { height: 20vh; right: 20%;}
 .HangingLine_4 { height: 60vh; right: 50%;}
 
-
 /* 원 스타일 */
 .HangingCircle {
-    width: 200px;
-    height: 200px;
+    width: 10vw;
+    height: 20vh;
     background-color: #a59788;
     border-radius: 50%;
     position: absolute;
@@ -70,8 +68,58 @@
     font-size: 1.2rem;
     font-weight: 1000;
     color: #949494;
-    position: absolute; /* 부모 기준 절대 위치 지정 */
+    position: absolute;
     right: 78%;
     top: 150%;
     z-index: 1;
 }
+
+/* 반응형 스타일 */
+
+@media screen and (max-width: 768px) {
+    .TitleSection {
+        height: 35%;
+        width: 40%;
+    }
+    .Title {
+        font-size: 2rem;
+    }
+    .HangingCircle {
+        width: 14vw;
+        height: 10vh;
+
+    }
+    .HangingCircleContainer {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        left: 30%;
+    }
+    .Scroll {
+        font-size: 1rem;
+        right: 78%;
+        top: 140%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .TitleSection {
+        height: 25%;
+        width: 40%;
+        border-radius: 50%;
+    }
+    .Title {
+        font-size: 1rem;
+    }
+    .HangingCircle {
+        width: 10vw;
+        height: 6vh;
+    }
+    .Scroll {
+        font-size: 0.9rem;
+        right: 75%;
+        top: 130%;
+    }
+} 
