@@ -126,3 +126,62 @@
 .ModalContent button:hover {
     background-color: #a59788;
 }
+/* 반응형 스타일 */
+@media screen and (max-width: 768px) {
+    .BoxGroup {
+        grid-template-columns: repeat(2, 1fr);
+        width: 50%;
+        gap: 3%;
+        margin-top: 15%;
+    }
+
+    .ProjectBox {
+        width: 30vw;
+        height: 30vh;
+    }
+
+    .PJImg {
+        width: 20vw;
+        height: 15vh
+    }
+
+    .TextBox {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .TextBox strong {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ProjectSection {
+        padding: 0 3vw;
+    }
+
+    .BoxGroup {
+        grid-template-columns: 1fr;
+        width: 60%;
+        gap: 1%;
+        margin-top:1%;
+    }
+
+    .ProjectBox {
+        width: 100%;
+        height: 24vh;
+    }
+
+    .PJImg {
+        width: 30vw;
+        height: 10vh;
+    }
+
+    .TextBox {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .TextBox_tech {
+        font-size: 0.8rem;
+    }
+}
