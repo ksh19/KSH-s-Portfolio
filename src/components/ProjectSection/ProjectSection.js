@@ -78,20 +78,25 @@ const ProjectSection = () => {
                             <div className="TextBox_tech">MySQL</div>
                         </div>
                     </div>
-                    <div className='ProjectBox'>
-                        2025.3.10 ~ <br/>
-                        <h1>프로젝트 준비중</h1>
-                        {/*
-                        <div className="TextBox">
-                            <strong>Project Name:</strong> ㅇㅇㅇㅇ
-                        </div> 
-                        <div className="TextBox">
-                            <strong>Description:</strong> ㅇㅇㅇ
+                    <div className='ProjectBox' onClick={() => openModal("StockLeague", "https://github.com/kimchanyoo/StockLeague")}>
+                        <div className="PJImg">
+                            2025.3.10 ~ <br/>
+                            <h1>프로젝트 진행 중</h1>
                         </div>
                         <div className="TextBox">
-                            <strong>Tech Stack:</strong> ㅇㅇㅇ
+                            <strong>Project Name:</strong> StockLeague
+                        </div> 
+                        <div className="TextBox">
+                            <strong>Description:</strong> 실시간 주식 모의 투자 리그 플랫폼
+                        </div>
+                        <div className="TextBox">
+                            <strong>Tech Stack:</strong>
+                            <div className="TextBox_tech">NEXT</div>
+                            <div className="TextBox_tech">REACT</div>
+                            <div className="TextBox_tech">TS</div>
+                            <div className="TextBox_tech">HTML5</div>
+                            <div className="TextBox_tech">CSS3</div>
                         </div>              
-                        */}            
                     </div>
                 </div>
                 <motion.div className='Line_4' animate={isInView ? bounceAnimation : {}}>

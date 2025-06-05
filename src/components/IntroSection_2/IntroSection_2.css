@@ -1,0 +1,216 @@
+.IntroSection_2 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh; /* 화면 전체 높이 */
+    width: 100vw;
+    gap: 20%; /* 가로 간격을 화면 크기에 비례하도록 조정 */
+    border: 10px solid #765D43;
+    overflow: hidden;
+    padding: 0 5vw; /* 작은 화면에서 여백을 조정 */
+}
+
+.IntroTitle_2 {
+    position: relative;
+    top: 9vh;
+    display: flex;
+    justify-content: start;
+    font-size: 2vw; /* 화면 크기에 비례하여 텍스트 크기 조정 */
+    text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 800;
+}
+
+.IntroBox_2 {
+    width: 60vw; /* 화면 크기에 비례하여 박스 크기 조정 */
+    max-width: 1500px; /* 최대 크기 제한 */
+    height: 60vh;
+    max-height: 900px;
+    background-color: #ffffff;
+    margin-top: 10vh;
+    border-radius: 10px;
+    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 2%;
+}
+
+.TextBox_1_2 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1vw; /* 화면 크기에 따라 글씨 크기 조정 */
+    font-weight: 700;
+    line-height: 1.8;
+    text-align: left;
+    width: 60%;
+}
+
+.TextBox_1_2 p {
+    margin-bottom: 1.4rem;
+    color: #333333;
+    letter-spacing: 0.02em;
+}
+  
+.TextBox_1_2 p strong {
+    color: #765D43; /* 메인 컬러와 맞춤 */
+}
+  
+.TextBox_1_2 blockquote {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    border-left: 6px solid #765D43;
+    font-weight: 900;
+    font-size: 1.5vw;
+    color: #3e3e3e;
+    font-style: italic;
+    line-height: 1.3;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+  
+.TextBox_1_2 > div {
+    margin-top: 1.5rem;
+    font-size: 1.1vw;
+    color: #555555;
+    line-height: 1.7;
+    font-weight: 600;
+}
+  
+.TextBox_1_2 > div p {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+  
+.TextBox_1_2 > div p strong {
+    color: #765D43;
+    font-weight: 800;
+    min-width: 7.5rem;
+}
+  
+.TextBox_1_2 > div p::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #765D43;
+    border-radius: 50%;
+}
+
+.ImgBox_2 {
+  display: flex;
+  gap: 1vw;
+  justify-content: center;
+  align-items: flex-end;
+  width: 18vw;
+  height: 14vw;
+  flex-shrink: 0;
+}
+
+.footprint {
+  width: 9vw;
+  height: 14vw;
+  margin-bottom: 0.5vw;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 6px 6px rgba(74, 60, 43, 0.6)); /* 혹은 SVG 내부 필터 중복 주의 */
+}
+
+.footprint.left {
+  transform: rotate(-12deg);
+}
+
+.footprint.right {
+  transform: rotate(12deg);
+}
+
+.footprint svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (max-width: 768px) {
+    .IntroSection_2 {
+        gap: 15%;
+    }
+
+    .IntroTitle_2 {
+        font-size: 3vw;
+        top: 9vh;
+    }
+
+    .IntroBox_2 {
+        width: 70vw;
+        height: auto;
+        padding: 3%;
+    }
+
+    .ImgBox_2 {
+        height: 12vh;
+        width: 12vh;
+        margin-bottom: 15%;
+    }
+
+    .TextBox_1_2 {
+        font-size: 2vw;
+        text-align: left;
+        width: 90%;
+    }
+    .TextBox_1_2 p {
+      font-size: 1.8vw;
+    }
+    .TextBox_1_2 blockquote {
+      font-size: 2.3vw;
+      padding-left: 1rem;
+      border-left-width: 4px;
+    }
+    .TextBox_1_2 > div {
+      font-size: 1.6vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .IntroSection_2 {
+        gap: 10%;
+    }
+
+    .IntroTitle_2 {
+        font-size: 4vw;
+        top: 9vh;
+    }
+
+    .IntroBox_2 {
+        width: 70vw;
+        height: auto;
+        padding: 8%;
+    }
+
+    .ImgBox_2 {
+        height: 10vh;
+        width: 10vh;
+    }
+
+    .TextBox_1_2 {
+        font-size: 2.8vw;
+        text-align: left;
+        width: 95%;
+    }
+    .TextBox_1_2 p {
+      font-size: 2.6vw;
+    }
+    .TextBox_1_2 blockquote {
+      font-size: 3.5vw;
+      padding-left: 0.8rem;
+      border-left-width: 3px;
+    }
+    .TextBox_1_2 > div {
+      font-size: 2.3vw;
+    }
+    .noWrapText_2 {
+        white-space: normal; /* 자동 줄바꿈 허용 */
+        display: inline-block;
+    }
+}
