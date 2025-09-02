@@ -5,6 +5,7 @@ import '../ContentSection/ContentSection.css';
 import TeamiImg from '../../assets/images/TeamI.png';
 import MzImg from '../../assets/images/Mazzip.png';
 import PofolImg from '../../assets/images/Portfolio.png';
+import SLImg from '../../assets/images/StockLeagueImg.png';
 
 const bounceAnimation = {
     y: [0, -50], // 위로 올라갔다 내려옴
@@ -78,11 +79,8 @@ const ProjectSection = () => {
                             <div className="TextBox_tech">MySQL</div>
                         </div>
                     </div>
-                    <div className='ProjectBox' onClick={() => openModal("StockLeague", "https://github.com/kimchanyoo/StockLeague")}>
-                        <div className="PJImg">
-                            2025.3.10 ~ <br/>
-                            <h1>프로젝트 진행 중</h1>
-                        </div>
+                    <div className='ProjectBox' onClick={() => openModal("StockLeague", "https://github.com/kimchanyoo/StockLeague/tree/dev-frontend")}>
+                        <img src={SLImg} alt="StockLeague" className='PJImg'></img>
                         <div className="TextBox">
                             <strong>Project Name:</strong> StockLeague
                         </div> 
