@@ -14,13 +14,22 @@ const bounceAnimation = {
 
 const ProjectSection = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [modalContent, setModalContent] = useState({ title: "", link: "" });
+    const [modalContent, setModalContent] = useState({ title: "", link: "", images: [] });
+    const [currentIndex, setCurrentIndex] = useState(0);
 
+    const nextImage = () => {
+        if (!modalContent.images) return;
+        setCurrentIndex((prev) => (prev + 1) % modalContent.images.length);
+    };
+    const prevImage = () => {
+        if (!modalContent.images) return;
+        setCurrentIndex((prev) => (prev - 1 + modalContent.images.length) % modalContent.images.length);
+    };
     const ref = useRef(null);
     const isInView = useInView(ref, { once: false, amount: 0.5 });
 
-    const openModal = (title, link) => {
-        setModalContent({ title, link });
+    const openModal = (title, link, images) => {
+        setModalContent({ title, link, images });
         setIsModalOpen(true);
     };
 
@@ -32,7 +41,21 @@ const ProjectSection = () => {
         <section ref={ref}>
             <div className='ProjectSection'>
                 <div className='BoxGroup'>
-                    <div className='ProjectBox' onClick={() => openModal("TeamI", "https://github.com/kimchanyoo/24-Capstone")}>
+                    <div className='ProjectBox' onClick={() => openModal("TeamI", "https://github.com/kimchanyoo/24-Capstone", 
+                        [
+                            "/Projectimg/TeamIimg/1.png",
+                            "/Projectimg/TeamIimg/2.png",
+                            "/Projectimg/TeamIimg/3.png",
+                            "/Projectimg/TeamIimg/4.png",
+                            "/Projectimg/TeamIimg/5.png",
+                            "/Projectimg/TeamIimg/6.png",
+                            "/Projectimg/TeamIimg/7.png",
+                            "/Projectimg/TeamIimg/8.png",
+                            "/Projectimg/TeamIimg/9.png",
+                            "/Projectimg/TeamIimg/10.png",
+                            "/Projectimg/TeamIimg/11.png",
+                        ]
+                    )}>
                         <img src={TeamiImg} alt="TeamI" className='PJImg'/>
                         <div className="TextBox">
                             <strong>Project Name:</strong> TeamI
@@ -48,7 +71,17 @@ const ProjectSection = () => {
                             <div className="TextBox_tech">CSS3</div>
                         </div>
                     </div>
-                    <div className='ProjectBox' onClick={() => openModal("KSH's Portfolio", "https://github.com/ksh19/KSH-s-Portfolio")}>
+                    <div className='ProjectBox' onClick={() => openModal("KSH's Portfolio", "https://github.com/ksh19/KSH-s-Portfolio",
+                        [
+                            "/Projectimg/Portfolioimg/1.png",
+                            "/Projectimg/Portfolioimg/2.png",
+                            "/Projectimg/Portfolioimg/3.png",
+                            "/Projectimg/Portfolioimg/4.png",
+                            "/Projectimg/Portfolioimg/5.png",
+                            "/Projectimg/Portfolioimg/6.png",
+                            "/Projectimg/Portfolioimg/7.png"
+                        ]
+                    )}>
                         <img src={PofolImg} alt="KSH's Portfolio" className='PJImg'/>
                         <div className="TextBox">
                             <strong>Project Name:</strong> KSH's Portfolio
@@ -64,7 +97,16 @@ const ProjectSection = () => {
                             <div className="TextBox_tech">CSS3</div>
                         </div>
                     </div>
-                    <div className='ProjectBox' onClick={() => openModal("Mazzip", "https://github.com/ksh19/.Net-project")}>
+                    <div className='ProjectBox' onClick={() => openModal("Mazzip", "https://github.com/ksh19/.Net-project",
+                        [
+                            "/Projectimg/Mazzipimg/1.png",
+                            "/Projectimg/Mazzipimg/2.png",
+                            "/Projectimg/Mazzipimg/3.png",
+                            "/Projectimg/Mazzipimg/4.png",
+                            "/Projectimg/Mazzipimg/5.png",
+                            "/Projectimg/Mazzipimg/6.png"
+                        ]
+                    )}>
                         <img src={MzImg} alt="Mazzip" className='PJImg'></img>
                         <div className="TextBox">
                             <strong>Project Name:</strong> Mazzip
@@ -79,7 +121,22 @@ const ProjectSection = () => {
                             <div className="TextBox_tech">MySQL</div>
                         </div>
                     </div>
-                    <div className='ProjectBox' onClick={() => openModal("StockLeague", "https://github.com/kimchanyoo/StockLeague/tree/dev-frontend")}>
+                    <div className='ProjectBox' onClick={() => openModal("StockLeague", "https://github.com/kimchanyoo/StockLeague/tree/dev-frontend",
+                        [
+                            "/Projectimg/StockLeagueimg/1.png",
+                            "/Projectimg/StockLeagueimg/2.png",
+                            "/Projectimg/StockLeagueimg/3.png",
+                            "/Projectimg/StockLeagueimg/4.png",
+                            "/Projectimg/StockLeagueimg/5.png",
+                            "/Projectimg/StockLeagueimg/6.png",
+                            "/Projectimg/StockLeagueimg/7.png",
+                            "/Projectimg/StockLeagueimg/8.png",
+                            "/Projectimg/StockLeagueimg/9.png",
+                            "/Projectimg/StockLeagueimg/10.png",
+                            "/Projectimg/StockLeagueimg/11.png",
+                            "/Projectimg/StockLeagueimg/12.png"
+                        ]
+                    )}>
                         <img src={SLImg} alt="StockLeague" className='PJImg'></img>
                         <div className="TextBox">
                             <strong>Project Name:</strong> StockLeague
@@ -107,7 +164,25 @@ const ProjectSection = () => {
                 <div className="Modal">
                     <div className="ModalContent">
                         <h2>{modalContent.title}</h2>
-                        <p>GitHub<br/> <a href={modalContent.link} target="_blank" rel="noopener noreferrer">{modalContent.link}</a></p>
+                        <p>GitHub<br/> 
+                            <a href={modalContent.link} target="_blank" rel="noopener noreferrer">
+                                {modalContent.link}
+                            </a>
+                        </p>
+
+                        {/* 이미지들 */}
+                        {modalContent.images?.length > 0 && (
+                            <div className="ModalSlider">
+                            <button className="SlideBtn left" onClick={prevImage}>‹</button>
+                            <img 
+                                src={modalContent.images[currentIndex]} 
+                                alt={`${modalContent.title} ${currentIndex+1}`} 
+                                className="SlideImage"
+                            />
+                            <button className="SlideBtn right" onClick={nextImage}>›</button>
+                            </div>
+                        )}
+
                         <button onClick={closeModal}>Close</button>
                     </div>
                 </div>
