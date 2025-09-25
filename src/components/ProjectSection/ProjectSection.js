@@ -178,6 +178,7 @@ const ProjectSection = () => {
                                 src={modalContent.images[currentIndex]} 
                                 alt={`${modalContent.title} ${currentIndex+1}`} 
                                 className="SlideImage"
+                                loading="lazy"
                             />
                             <button className="SlideBtn right" onClick={nextImage}>›</button>
                             </div>

@@ -141,7 +141,7 @@
     border-radius: 8px;
     border: 2px solid #ddd;
     object-fit: cover;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease-in-out;
 }
   
 .SlideBtn {
