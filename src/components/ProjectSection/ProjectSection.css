@@ -5,9 +5,8 @@
     justify-content: center;
     height: 100vh; 
     width: 100vw;
-    gap: 25%;
+    gap: 15%;
     border: 10px solid #765D43;
-    overflow: hidden;
     padding: 0 5vw;
 }
 
@@ -15,21 +14,28 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(250px, 1fr));
     width: 50%;
-    gap: 12%;
-    margin-top: 5%;
+    height: 80vh;
+    margin-top: 3%;
+    padding: 10px 20px;
+    background-color: #f6f5f5;
+    border-radius: 30px 0 0 30px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
 }
 
 .ProjectBox {
-    width: 120%;
+    width: 90%;
     height: 50vh;
     max-height: 400px;
+    margin-top: 30px;
     background-color: #ffffff;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue";
     font-weight: bold;
     box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
     cursor: pointer;
@@ -41,7 +47,7 @@
     border: 3px solid #828282;
     border-radius: 10px;
     object-fit: cover; 
-
+    object-position: top;
 }
 
 .TextBox {
@@ -168,19 +174,18 @@
 /* 반응형 스타일 */
 @media screen and (max-width: 768px) {
     .BoxGroup {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         width: 50%;
-        gap: 3%;
-        margin-top: 15%;
+        margin-top: 50px;
     }
 
     .ProjectBox {
-        width: 30vw;
+        width: 40vw;
         height: 30vh;
     }
 
     .PJImg {
-        width: 20vw;
+        width: 30vw;
         height: 15vh
     }
 
@@ -190,6 +195,10 @@
     }
     .TextBox strong {
         font-size: 0.8rem;
+    }
+    .ModalContent {
+        width: 80%;
+        height: 55%;
     }
 }
 
@@ -202,12 +211,12 @@
         grid-template-columns: 1fr;
         width: 60%;
         gap: 1%;
-        margin-top:1%;
+        margin-top:10%;
     }
 
     .ProjectBox {
-        width: 100%;
-        height: 24vh;
+        width: 95%;
+        height: 30vh;
     }
 
     .PJImg {
@@ -216,11 +225,12 @@
     }
 
     .TextBox {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
         text-align: center;
     }
 
     .TextBox_tech {
-        font-size: 0.8rem;
+        font-size: 0.5rem;
+        padding: 1px;
     }
 }
