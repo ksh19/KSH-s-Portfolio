@@ -1,3 +1,4 @@
+
 .ContactSection {
     display: flex;
     flex-direction: row;
@@ -8,12 +9,12 @@
     gap: 15%;
     border: 10px solid #765D43;
     overflow: hidden;
-    padding: 0 5vw; /* 화면 크기에 따라 여백 조정 */
+    padding: 0 5vw; 
 }
 
 .ContactBox {
-    width: 80%; /* 너비를 %로 설정하여 반응형 처리 */
-    max-width: 900px; /* 최대 너비 설정 */
+    width: 80%; 
+    max-width: 900px; 
     height: auto;
     background-color: #ffffff;
     margin-top: 17%;
@@ -30,8 +31,8 @@
 }
 
 .IconImg {
-    height: 20%; /* 이미지 크기 비율 조정 */
-    max-height: 120px; /* 최대 높이 설정 */
+    height: 20%; 
+    max-height: 120px; 
 }
 
 .TextBox_2 {
@@ -46,21 +47,20 @@
 
 .LittleTitle {
     color: #828282;
-    font-size: 1vw; /* 소제목 글씨 크기 화면 비례 */
+    font-size: 1vw; 
 }
 
 .contact-link {
     text-decoration: none;
     color: inherit;
     font-weight: bold;
-    font-size: 1vw; /* 링크 글씨 크기 화면 비례 */
+    font-size: 1vw; 
 }
 
 .contact-link:hover {
     text-decoration: underline;
 }
 
-/* 작은 화면을 위한 추가 스타일 */
 @media (max-width: 768px) {
     .ContactSection {
         justify-content: flex-start;
@@ -69,7 +69,7 @@
     .ContactBox {
         width: 90%;
         height: auto;
-        margin-top: 10%; /* 위 여백 조정 */
+        margin-top: 10%; 
     }
 
     .IconImg {
@@ -82,15 +82,14 @@
     }
 
     .LittleTitle {
-        font-size: 4vw; /* 화면이 작을 때 작은 크기 */
+        font-size: 4vw; 
     }
 
     .contact-link {
-        font-size: 2vw; /* 링크 글씨 크기 조정 */
+        font-size: 2vw; 
     }
 }
 
-/* 매우 작은 화면을 위한 추가 스타일 */
 @media (max-width: 480px) {
     .ContactSection {
         gap: 5%; /* 더 좁은 화면에서는 여백을 줄여서 맞춤 */
@@ -102,7 +101,7 @@
     }
 
     .IconImg {
-        height: 30%; /* 아이콘 이미지 크기를 더 크게 조정 */
+        height: 30%; 
     }
 
     .TextBox_2 {
@@ -110,10 +109,10 @@
     }
 
     .LittleTitle {
-        font-size: 5vw; /* 소제목 크기를 더 작게 */
+        font-size: 5vw; 
     }
 
     .contact-link {
-        font-size: 3vw; /* 링크 글씨 크기도 작게 */
+        font-size: 3vw; 
     }
 }

@@ -1,0 +1,141 @@
+/* 전체 헤더 */
+.lamp-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 9999;
+  pointer-events: none;
+  transform-origin: center top;
+}
+
+/* 형광등 바깥 하우징 */
+.lamp-body {
+  position: relative;
+  width: 80%;
+  height: 40px;
+  background: #f9f9f9;
+  border: 4px solid black;
+  border-radius: 0 0 30px 30px;
+  pointer-events: none;
+}
+
+/* 노란 불빛 부분 */
+.lamp-light {
+  position: absolute;
+  bottom: -15px;
+  left: 4.2%;
+  width: 90%;
+  height: 20px;
+  background: #ffee90;
+  border: 4px solid black;
+  border-radius: 0 0 20px 20px;
+}
+
+/* 줄 공간 */
+.lamp-rope {
+  position: absolute;
+  left: 87%;
+  top: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 줄 */
+.rope-line {
+  position: relative;
+  width: 4px;
+  height: 80px;
+  background: black;
+  border-radius: 2px; /* 가로 반으로 약간 둥글게 */
+  position: relative;
+
+  padding: 10px 0; /* 위/아래 여유 공간 */
+  box-sizing: content-box;
+  user-select: none;
+  pointer-events: auto;
+  cursor: grab;
+}
+
+/* 끝 원형 */
+.rope-line::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* 줄 끝 */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;  /* 원 크기 */
+  height: 12px; /* 원 크기 */
+  background: black;
+  border-radius: 50%; /* 완전 원 */
+  cursor: grab;
+}
+
+.rope-hint {
+  position: absolute;
+  white-space: nowrap;
+  right: -40px;  /* 줄 왼쪽에 표시 */
+  bottom: -50px;
+  font-family: "PressStart2P", sans-serif;
+  font-size: 20px;
+  color: #fff6a8;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+  animation: floatHint 1.5s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+@keyframes floatHint {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+body.light-on .rope-hint {
+  opacity: 0;
+  pointer-events: none;
+}
+/* 라이트 ON 모드 */
+body.light-on {
+  background: #fffceb;
+  transition: background 0.3s;
+}
+
+/* 불 켜질 때 광량 증가 */
+body.light-on .lamp-light {
+  background: #fffad0;
+  box-shadow: 0 0 15px #fff4a6;
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .lamp-header{
+      transform: scale(0.9);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientaiton: landscape) {
+  .lamp-header {
+      transform: scale(0.8);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .lamp-header {
+      transform: scale(0.8);
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .lamp-header {
+      transform: scale(0.7);
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .lamp-header {
+      transform: scale(0.7);
+    }
+}

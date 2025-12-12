@@ -1,0 +1,194 @@
+/*/////////////////profile/////////////////*/
+.profile-container {
+    display: flex;
+    padding: 24px;
+    border: 1px solid rgb(209, 213, 219);
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    background-color: white;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+/* --- 2. 사진 영역 --- */
+.profile-image-area {
+    flex-shrink: 0;
+    margin-right: 1.5rem; /* mr-6 */
+}
+.profile-photo-wrapper {
+    width: 8rem;
+    height: 8rem;
+    background-color: rgb(229, 231, 235);
+    border: 4px solid rgb(156, 163, 175);
+    border-radius: 9999px; /* 완전한 원 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.profile-photo {
+    object-fit: contain;
+    width: 100%;
+}
+
+/* --- 3. 상세 정보 영역 --- */
+.profile-detail-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; 
+}
+
+.profile-title {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700; /* font-bold */
+    color: rgb(31, 41, 55);
+    border-bottom: 1px solid rgb(229, 231, 235);
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.profile-detail-p {
+    font-size: 0.875rem;
+    color: rgb(75, 85, 99);
+}
+
+.profile-memo-container {
+    margin-top: 1rem; /* mt-4 */
+    padding-top: 0.75rem; /* pt-3 */
+    border-top: 1px solid rgb(229, 231, 235);
+}
+
+.profile-memo-text {
+    font-size: 0.75rem;
+    color: rgb(107, 114, 128);
+    font-style: italic;
+}
+/*/////////////////projects/////////////////*/
+.project-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    background-color: #fff;
+}
+.project-menu-item:hover {
+    background-color: #f0f0f0;
+}
+/*/////////////////skills/////////////////*/
+.skills-left-content,
+.skills-right-content {
+    width: 100%;
+    height: 100%;
+}
+/* 제목 스타일 */
+.skills-page-title {
+    color: #333333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin: 0 auto;
+}
+
+/* 스킬 목록 스타일 */
+.skills-list {
+    margin-top: 25px;
+}
+
+.skill-item {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: #555555;
+    border-bottom: 1px dotted #f5f5f5; 
+    padding-bottom: 5px;
+}
+
+.skill-category {
+    font-weight: 800;
+    color: #1a73e8; /* 강조 색상 (파란색 계열) */
+    display: inline-block;
+    width: 100px; /* 카테고리 너비를 고정하여 기술 목록 정렬 */
+}
+
+/* 오른쪽 페이지 요약/메모 스타일 */
+.skills-summary-title {
+    color: #333333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin: 0 auto;
+}
+
+.skills-memo-quote {
+    background-color: #f9f9f9;
+    border-left: 5px solid #1a73e8; /* 파란색 세로줄로 인용구 강조 */
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #444444;
+}
+
+/* 기술 스택 로고 배치 공간 스타일 */
+.skills-placeholder-image {
+    background-color: #e8f0fe; /* 연한 파란색 배경 */
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1a73e8;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 5px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.tech-logo {
+    height: 35px; /* 모든 로고의 높이를 동일하게 설정 */
+    width: auto;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1)); /* 은은한 그림자 효과 */
+    opacity: 0.85;
+    transition: transform 0.3s ease;
+}
+
+.tech-logo:hover {
+    opacity: 1;
+    transform: scale(1.1); /* 호버 시 확대 효과 */
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .profile-container {
+        padding: 8px;          
+        max-width: 95vw;  
+        flex-direction: column;
+    }
+
+    .profile-image-area {
+        margin-right: 0;     
+        margin-bottom: 0;    
+        align-self: center;    
+    }
+    .profile-photo-wrapper {
+        width: 5rem;
+        height: 5rem;
+    }
+    .profile-title {
+        font-size: 0.6rem;    
+        text-align: center;    
+    }
+    .profile-detail-area {
+        gap: 0;
+    }
+
+    .profile-detail-p {
+        font-size: 0.6rem;
+        margin-bottom: -5px;
+    }
+    
+    .profile-memo-text {
+        font-size: 10px;
+    }
+}
